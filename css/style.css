@@ -1,0 +1,323 @@
+/* base */
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* swiper */
+.swiper-container {
+    width: 600px;
+    height: 350px;
+  }
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 로딩 */
+.loader {
+    background: #000;
+    background: radial-gradient(#222, #000);
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+  }
+  
+  .loader-inner {
+    bottom: 0;
+    height: 60px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+  }
+  
+  .loader-line-wrap {
+    animation: 
+    spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
+  ;
+    box-sizing: border-box;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform-origin: 50% 100%;
+    width: 100px;
+  }
+  .loader-line {
+    border: 4px solid transparent;
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+  }
+  .loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
+  .loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
+  .loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
+  .loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
+  .loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
+  
+  .loader-line-wrap:nth-child(1) .loader-line {
+    border-color: hsl(0, 80%, 60%);
+    height: 90px;
+    width: 90px;
+    top: 7px;
+  }
+  .loader-line-wrap:nth-child(2) .loader-line {
+    border-color: hsl(60, 80%, 60%);
+    height: 76px;
+    width: 76px;
+    top: 14px;
+  }
+  .loader-line-wrap:nth-child(3) .loader-line {
+    border-color: hsl(120, 80%, 60%);
+    height: 62px;
+    width: 62px;
+    top: 21px;
+  }
+  .loader-line-wrap:nth-child(4) .loader-line {
+    border-color: hsl(180, 80%, 60%);
+    height: 48px;
+    width: 48px;
+    top: 28px;
+  }
+  .loader-line-wrap:nth-child(5) .loader-line {
+    border-color: hsl(240, 80%, 60%);
+    height: 34px;
+    width: 34px;
+    top: 35px;
+  }
+  
+  @keyframes spin {
+        0%, 15% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+
+  .loaderTextWrap {
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 100px;
+      color: #fff;
+      font-family: 'Pretendard-Regular';
+      font-size: 20px;
+      white-space: nowrap;
+  }
+/* header */
+#header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 10000;
+}
+#header .imgWrap {
+    position: fixed;
+    width: 100%; height: 80px;
+    background: #11cbbe;
+    border-bottom: 1px solid #000;
+}
+
+#header .imgWrap img {
+    position: fixed;
+    margin: 10px 20px;
+    width: 60px;
+    height: 60px;
+}
+
+#header .mainLogo {
+    position: fixed;
+    left: 45%; top: 10px;
+}
+
+#header .mainLogo a {
+    font-family: 'Cafe24Ssurround';
+    color: #fff;
+    font-size: 50px;
+}
+
+#header .menuWrap {
+    position: fixed;
+    right: 0; top: 10px;
+}
+
+#header .menuWrap ul {
+    display: flex;
+    margin: 15px;
+}
+
+#header .menuWrap li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+#header .menuWrap li a {
+    color: #fff;
+    font-family: 'Cafe24Ssurround';
+    font-size: 20px;
+}
+
+/* section1 */
+#contents {}
+#section1 {
+    width: 100%;
+    height: 400vh;
+    background: #11cbbe;
+}
+
+#section1 .textWrap {}
+#section1 .textWrap .main-text {
+    position: fixed;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'twaysky';
+    font-size: 30px;
+    line-height: 60px;
+}
+
+#section1 .bossImg {
+    position: fixed;
+    left: 0; bottom: 0;
+    width: 25.5%;
+    height: 52.5vh;
+}
+
+#section1 .appDown {
+    width: 25.5%;
+    height: 52.5vh;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    padding: 13px 35px;
+    background: url(../img/boss.jpg) no-repeat center;
+    background-size: cover;
+    z-index: 1000;
+}
+
+#section1 .appDown .appWrap {
+
+}
+
+#section1 .appDown .appWrap .apple {
+    width: 323px;
+    margin: 30% 15%;
+}
+
+#section1 .appDown .googleWrap {
+
+}
+
+#section1 .appDown .googleWrap .google {
+    width: 323px;
+    margin: -20% 15%;
+}
+/* section2 */
+#section2 {
+    width: 100%;
+    height: 130vh;
+    background: rgb(238, 61, 61);
+}
+
+#section2 .appDesc {}
+#section2 .appDesc .firstDesc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+#section2 .appDesc .firstDesc div {
+    width: 20%; height: 30vh;
+    background: #CCC;
+    margin: 15% 2% 3% 2%;
+    
+}
+
+#section2 .appDesc .firstDesc div:first-child {
+    position: relative;
+}
+#section2 .appDesc .firstDesc div:first-child::after {
+    position: absolute;
+    right: -10%; top: -8%;
+    content: '';
+    width: 1px;
+    height: 80vh;
+    background: #000;
+}
+#section2 .appDesc .firstDesc div:nth-child(2) {
+    position: relative;
+}
+#section2 .appDesc .firstDesc div:nth-child(2)::after {
+    position: absolute;
+    right: -10%; top: -8%;
+    content: '';
+    width: 1px;
+    height: 80vh;
+    background: #000;
+}
+
+#section2 .appDesc .secondDesc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section2 .appDesc .secondDesc div {
+    width: 20%; height: 30vh;
+    background: #CCC;
+    margin: 3% 2% 3% 2%;
+}
+
+/* section3 */
+#section3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+}
+
+#section3 .sliderWrap {
+    position: absolute;
+    left: 0%; top: 50%;
+    transform: translate(0%, -50%);
+}
+
+#section3 .gameList {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'twaysky';
+}

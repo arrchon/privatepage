@@ -1,0 +1,458 @@
+@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* con */
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* header */
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 10000;
+    background: #a1887f;
+    border-bottom: 0.5px solid #fff;
+}
+
+#header.scroll {
+    background: #f7f7f7;
+    border-bottom: 0.5px solid #a1887f;
+}
+
+#header.scroll_down {
+    background: #29b6f6;
+    border-bottom: 0.5px solid #fff;
+}
+
+#header.scroll_last {
+    background: #131313;
+    border-bottom: 0.5px solid #fff;
+}
+
+#header .logo img {
+    width: 40px;
+    height: 40px;
+    margin: 15px 30px;
+}
+
+#header .signIn {
+    margin: 0 30px;
+    width: 85px;
+    height: 30px;
+}
+
+#header .signIn .logIn-btn {
+    display: inline-block;
+    background: #12cbbf;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+}
+
+#header .signIn .logIn-btn:hover {
+    background: #fff;
+    color: #12cbbf;
+    transition: all 0.3s;
+}
+
+/* 1 */
+#section1 {
+    height: 80vh;
+    background: #a1887f;
+}
+
+#section1 .container .intro .imgWrap img {
+    position: absolute;
+    right: 5%; bottom: 2%;
+    max-width: 700px;
+}
+#section1 .container .intro .mainText {
+    position: absolute;
+    left: 5%; bottom: 40%;
+    max-width: 500px;
+    height: 35%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#section1 .container .intro .mainText h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+}
+#section1 .container .intro .mainText p {
+    margin: 40px 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+#section1 .container .intro .mainText strong {
+    padding-top: 50px;
+    font-size: 64px;
+    color: #fff;
+}
+#section1 .container .toApplink {
+    position: fixed;
+    left: 50%; bottom: 2%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+    border-radius: 45px;
+    font-size: 21px;
+    background: #12cbbf;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    z-index: 10000;
+}
+
+/* 2 */
+#section2 {
+    height: 100vh;
+    background: #f7f7f7;
+}
+
+#section2 .container .strengthEx {
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    padding-top: 100px;
+    display: block;
+}
+
+#section2 .container .strengthEx.up1 {
+    color: #000;
+}
+
+#section2 .container .strengthEx span {
+    font-size: 60px;
+    font-weight: 700;
+}
+#section2 .container .strengthEx p {
+    font-size: 25px;
+    padding-top: 20px;
+    color: #777;
+    padding-bottom: 30px;
+}
+
+#section2 .container .contWrap {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#section2 .container .contWrap.up2 {
+    color: #000;
+}
+
+#section2 .container .contWrap .str1 {
+    flex: 1 1 30%;
+    margin: 0 10px 0 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+#section2 .container .contWrap .str1 img {
+    width: 70%;
+    height: 70%;
+}
+#section2 .container .contWrap .str1 h2 {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 700;
+}
+#section2 .container .contWrap .str1 p {
+    margin-top: 10px;
+}
+#section2 .container .contWrap .str2 {
+    flex: 1 1 30%;
+    margin: 0 10px 0 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+}
+#section2 .container .contWrap .str2 img {
+    width: 70%;
+    height: 70%;
+}
+#section2 .container .contWrap .str2 h2 {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 700;
+}
+#section2 .container .contWrap .str2 p {
+    margin-top: 10px;
+}
+#section2 .container .contWrap .str3 {
+    flex: 1 1 30%;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+#section2 .container .contWrap .str3 img {
+    width: 70%;
+    height: 70%;
+}
+#section2 .container .contWrap .str3 h2 {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 700;
+}
+#section2 .container .contWrap .str3 p {
+    margin-top: 10px;
+}
+
+/* 3 */
+#section3 {
+    height: 90vh;
+    background: #29b6f6 ;
+}
+
+#section3 .container {}
+#section3 .container .chobo {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+#section3 .container .chobo h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    
+}
+#section3 .container .forNew {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+#section3 .container .forNew .gameEx {
+    width: 600px;
+    height: 300px;
+    border-radius: 30px;
+    background: #00c853 ;
+    padding: 20px;
+    overflow: hidden;
+}
+#section3 .container .forNew .gameEx .exp {
+    margin-bottom: 20px;
+    font-family: 'twaysky';
+    font-size: 24px;
+}
+#section3 .container .forNew .gameEx a {
+    font-family: 'twaysky';
+    background: #303030;
+    padding: 15px;
+    border-radius: 25px;
+}
+#section3 .container .forNew .gameEx img {
+    width: 150px; height: 150px;
+    float: right;
+    margin-right: 20px;
+}
+#section3 .container .forNew .commu {
+    width: 600px;
+    height: 300px;
+    border-radius: 30px;
+    padding: 20px;
+    overflow: hidden;
+    background: #ff6d00;
+}
+#section3 .container .forNew .commu .exp {
+    margin-bottom: 20px;
+    font-family: 'twaysky';
+    font-size: 24px;
+}
+#section3 .container .forNew .commu a {
+    font-family: 'twaysky';
+    background: #303030;
+    padding: 15px;
+    border-radius: 25px;
+}
+#section3 .container .forNew .commu img {
+    width: 150px; height: 150px;
+    float: right;
+    margin-right: 20px;
+}
+
+#section3 .container .encourage {
+    margin-top: 50px;
+}
+#section3 .container .encourage p {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* section4 */
+#section4 {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    background: rgb(19, 19, 19);
+}
+
+#section4 .contents3 {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#section4 .contents3 h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+#section4 .contents3 ul {
+    margin: 0 auto;
+    max-width: 900px;
+}
+#section4 .contents3 li {
+    list-style: none;
+    
+}
+#section4 .contents3 li button {
+    width: 100%;
+    height: 75px;
+    text-align: left;
+    padding-left: 15px;
+    background: #303030;
+    border: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin: 5px 0;
+}
+
+#section4 .contents3 li button:hover {
+    color: #555;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#section4 .contents3 li button.act {
+    color: #ccc;
+}
+
+#section4 .contents3 li div {
+    display: none;
+}
+
+#section4 .contents3 li div.active {
+    display: block;
+    background: #303030;
+    border: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    color: #777;
+    margin: 5px 0;
+    padding: 10px;
+
+}
+
+/* footer */
+#footer {
+    position: relative;
+    width: 100%;
+    background: #000;
+    height: 50vh;
+}        
+
+#footer .footer-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#footer .footer-container .footer-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer .footer-container .footer-contents .call {
+    padding-top: 50px;
+    margin-bottom: 30px;
+    color: #666;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+}
+
+#footer .footer-container .footer-contents .sns {
+    display: flex;
+    width: 25%;
+    padding-bottom: 0;
+    margin-right: 0;
+}
+
+#footer .footer-container .footer-contents .sns li {
+    margin-top: 20px;
+    flex: 1 1 1%;
+    width: 5%;
+}
+
+#footer .footer-container .footer-contents .sns li a {
+    
+}
+#footer .footer-container .footer-contents .sns li a img {
+    width: 36px;
+    height: 36px;
+}
+
+#footer .footer-container ul {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+#footer .footer-container ul li {
+    list-style: none;
+    display: inline-block;
+    width: 24.5%;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+#footer .footer-container ul li a {
+    text-decoration: none;
+    color: #666;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+}
+
+#footer .footer-container .copyright {
+    color: #666;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+    font-size: 24px;
+    padding-bottom: 40px;
+    text-align: center;
+}

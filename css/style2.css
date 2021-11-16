@@ -1,0 +1,801 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 10000;
+}
+
+#header .logo {
+
+}
+
+#header .logo img {
+    width: 100px;
+    height: 100px;
+    margin: 15px 55px;
+}
+
+#header .signIn {
+    margin: 0 55px;
+    width: 125px;
+    height: 50px;
+}
+
+#header .signIn .logIn-btn {
+    display: inline-block;
+    background: #12cbbf;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    line-height: 48px;
+    color: #fff;
+}
+
+#header .signIn .logIn-btn:hover {
+    background: #fff;
+    color: #12cbbf;
+    transition: all 0.3s;
+}
+
+/* section1 */
+#section1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#section1::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    height: 8px;
+    width: 100%;
+    background: #555;
+}
+
+#section1 .sec1-bg .bgWrap {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100vh;
+    z-index: 10;
+    background: #000;
+    opacity: 0.45;
+}
+
+#section1 .sec1-bg img {
+    height: 100vh;
+}
+
+#section1 .sec1-cont {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    color: #fff;
+}
+
+#section1 .sec1-cont .mainText {
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 73px;
+    font-weight: 700;
+    margin-bottom: 100px;
+    white-space: nowrap;
+}
+
+#section1 .sec1-cont .subText1 {
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+#section1 .sec1-cont .subText2 {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: center;
+    
+}
+
+#section1 .sec1-cont .subText2 .email {
+    width: 75%;
+    height: 60px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+}
+
+#section1 .sec1-cont .subText2 .email-btn {
+    width: 15%;
+    background: #12cbbf;
+    border: none;
+    margin-left: 1px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+#section1 .sec1-cont .subText2 .email-btn:hover {
+    background: #fff;
+    color: #12cbbf;
+    transition: all 0.3s;
+}
+
+#section1 .sec1-cont .subText3 {
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 28px;
+}
+
+/* section2 */
+#section2 {
+    position: relative;
+    width: 100%;
+    background: #000;
+    
+}
+
+#section2 .contents2 {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* section2-cont1 */
+#section2 .contents2 .box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+#section2 .contents2 .box1::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 33%;
+    height: 8px;
+    width: 100%;
+    background: #555;
+}
+
+#section2 .contents2 .box1 .textWrap {
+    flex: 1 1 50%;
+}
+#section2 .contents2 .box1 .textWrap h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#section2 .contents2 .box1 .textWrap p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    width: 500px;
+    margin-right: 0;
+}
+#section2 .contents2 .box1 .imgWrap {
+    flex: 1 1 50%;
+}
+#section2 .contents2 .box1 .imgWrap img {
+    
+}
+
+/* section2-cont2 */
+#section2 .contents2 .box2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 50px 0;
+}
+
+#section2 .contents2 .box2::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 66%;
+    height: 8px;
+    width: 100%;
+    background: #555;
+}
+
+#section2 .contents2 .box2 .textWrap {
+    flex: 1 1 50%;
+    margin-left: 50px;
+}
+#section2 .contents2 .box2 .textWrap h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#section2 .contents2 .box2 .textWrap p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    width: 500px;
+    margin-right: 0;
+}
+#section2 .contents2 .box2 .imgWrap {
+    flex: 1 1 50%;
+}
+#section2 .contents2 .box2 .imgWrap img {
+    
+}
+
+/* section2-cont3 */
+#section2 .contents2 .box3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 70px 0;
+}
+
+#section2 .contents2 .box3::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    height: 8px;
+    width: 100%;
+    background: #555;
+}
+
+#section2 .contents2 .box3 .textWrap {
+    flex: 1 1 50%;
+}
+#section2 .contents2 .box3 .textWrap h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#section2 .contents2 .box3 .textWrap p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    width: 500px;
+    margin-right: 0;
+}
+#section2 .contents2 .box3 .imgWrap {
+    flex: 1 1 50%;
+}
+#section2 .contents2 .box3 .imgWrap img {
+    
+}
+
+/* section3 */
+#section3 {
+    position: relative;
+    width: 100%;
+    background: #000;
+}
+
+#section3::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    height: 8px;
+    width: 100%;
+    background: #555;
+}
+
+#section3 .contents3 {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#section3 .contents3 h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+#section3 .contents3 ul {
+    margin: 0 auto;
+    max-width: 900px;
+}
+#section3 .contents3 li {
+    list-style: none;
+    
+}
+#section3 .contents3 li button {
+    width: 100%;
+    height: 75px;
+    text-align: left;
+    padding-left: 15px;
+    background: #303030;
+    border: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+#section3 .contents3 li button:hover {
+    color: #555;
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#section3 .contents3 li button.act {
+    color: #ccc;
+}
+
+#section3 .contents3 li div {
+    display: none;
+}
+
+#section3 .contents3 li div.active {
+    display: block;
+    background: #111;
+    border: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    color: #777;
+    margin: 10px 0;
+    padding: 10px;
+
+}
+
+#section3 .contents3 li div span {}
+
+#section3 .contents3 h2 {
+    text-align: center;
+    margin: 30px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    font-weight: lighter;
+}
+
+#section3 .subText2 {
+    display: flex;
+    padding-bottom: 80px;
+    justify-content: center;
+}
+
+#section3 .subText2 .email {
+    width: 60%;
+    height: 60px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+}
+
+#section3 .subText2 .email-btn {
+    width: 15%;
+    background: #12cbbf;
+    border: none;
+    margin-left: 1px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+#section3 .subText2 .email-btn:hover {
+    background: #fff;
+    color: #12cbbf;
+    transition: all 0.3s;
+}
+
+/* footer */
+#footer {
+    position: relative;
+    width: 100%;
+    background: #000;
+}        
+#footer .footer-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#footer .footer-container .call {
+    padding-top: 50px;
+    margin-bottom: 30px;
+    color: #666;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+}
+
+#footer .footer-container ul {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+#footer .footer-container ul li {
+    list-style: none;
+    display: inline-block;
+    width: 24.5%;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+#footer .footer-container ul li a {
+    text-decoration: none;
+    color: #666;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+}
+
+#footer .footer-container .copyright {
+    color: #666;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: 1px;
+    font-size: 24px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+/* 반응형 */
+/* 768 ~ 1024 */
+@media all and (min-width: 768px) and (max-width: 1024px){
+    /* 1 */
+    #section1 {
+        height: 70vh;
+    }
+
+    #section1 .sec1-bg .bgWrap {
+        height: 100%;
+    }
+
+    #section1 .sec1-cont .mainText {
+        font-size: 52px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    #section1 .sec1-cont .subText1 {
+        font-size: 20px;
+        margin-bottom: 30px;
+        white-space: nowrap;
+    }
+
+    #section1 .sec1-cont .subText2 {
+        margin-bottom: 20px;
+    }
+
+    #section1 .sec1-cont .subText2 .email {
+        width: 90%;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    #section1 .sec1-cont .subText2 .email-btn {
+        width: 20%;
+        height: 49px;
+        font-size: 18px;
+    }
+
+    #section1 .sec1-cont .subText3 {
+        font-size: 20px;
+    }
+
+    /* 2 */
+    #section2 .contents2 .box1 {
+        padding: 50px 20px 20px 20px;
+    }
+
+    #section2 .contents2 .box1 .textWrap h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    #section2 .contents2 .box1 .textWrap p {
+        font-size: 16px;
+        width: 450px;
+    }
+
+    #section2 .contents2 .box2 {
+        padding: 50px 20px 40px 20px;
+    }
+
+    #section2 .contents2 .box2 .textWrap h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    #section2 .contents2 .box2 .textWrap p {
+        font-size: 16px;
+        width: 400px;
+    }
+
+    #section2 .contents2 .box3 {
+        padding: 40px 20px 50px 20px;
+    }
+
+    #section2 .contents2 .box3 .textWrap h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    #section2 .contents2 .box3 .textWrap p {
+        font-size: 16px;
+        width: 450px;
+    }
+
+    /* 3 */
+    #section3 .contents3 h1 {
+        font-size: 50px;
+        padding: 30px 0;
+    }
+
+    #section3 .contents3 li button {
+        width: 90%;
+        margin-left: 5%;
+        margin: 1% 0 1% 5%;
+    }
+
+    #section3 .contents3 li div.active {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #section3 .subText2 {
+        padding-bottom: 50px;
+    }
+
+    /* foot */
+    #footer .footer-container {
+        text-align: center;
+    }
+
+    #footer .footer-container ul {
+        padding-bottom: 30px;
+    }
+
+    #footer .footer-container ul li {
+        width: 21%;
+    }
+
+    #footer .footer-container .copyright {
+        font-size: 20px;
+        padding-bottom: 40px;
+    }
+}
+
+/* 360 ~ 480 */
+@media all and (min-width: 360px) and (max-width: 480px) {
+    #header .logo img {
+        width: 50px;
+        height: 50px;
+        margin: 10px 20px;
+    }
+
+    #header .signIn  {
+        margin: 0 20px;
+        width: 75px;
+        height: 30px;
+    }
+
+    #header .signIn .logIn-btn {
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    #section1 {
+        height: 70vh;
+    }
+
+    #section1 .sec1-bg .bgWrap {
+        height: 100%;
+    }
+
+    #section1 .sec1-cont .mainText {
+        font-size: 28px;
+        margin: 70px 0 20px 0;
+        padding-top: 30px;
+    }
+
+    #section1 .sec1-cont .subText1 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    #section1 .sec1-cont .subText2 {
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #section1 .sec1-cont .subText2 .email {
+        width: 100%;
+        height: 45px;
+        font-size: 15px;
+        padding-left: 5px;
+        padding-top: -2px;
+        font-weight: lighter;
+    }
+
+    #section1 .sec1-cont .subText2 .email-btn {
+        width: 30%;
+        white-space: nowrap;
+        padding: 10px;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    #section1 .sec1-cont .subText3 {
+        font-size: 16px;
+    }
+
+    #section2 .contents2 .box1 {
+        padding: 30px 0;
+        flex-direction: column;
+    }
+
+    #section2 .contents2 .box1 .textWrap h2 {
+        font-size: 27px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #section2 .contents2 .box1 .textWrap p {
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #section2 .contents2 .box1 .imgWrap {
+        width: 75%;
+        
+    }
+
+    #section2 .contents2 .box1 .imgWrap img {
+        height: 150px;
+    }
+
+    #section1 .sec1-cont .subText3 {
+        font-size: 18px;
+    }
+
+    #section2 .contents2 .box2 {
+        padding: 30px 0;
+        flex-direction: column-reverse;
+    }
+
+    #section2 .contents2 .box2 .textWrap {
+        margin-left: 0;
+    }
+
+    #section2 .contents2 .box2 .textWrap h2 {
+        font-size: 27px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #section2 .contents2 .box2 .textWrap p {
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #section2 .contents2 .box2 .imgWrap {
+        width: 75%;
+    }
+
+    #section2 .contents2 .box2 .imgWrap img {
+        height: 150px;
+    }
+
+    #section2 .contents2 .box3 {
+        padding: 30px 0;
+        flex-direction: column;
+    }
+
+    #section2 .contents2 .box3 .textWrap h2 {
+        font-size: 27px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #section2 .contents2 .box3 .textWrap p {
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #section2 .contents2 .box3 .imgWrap {
+        width: 75%;
+    }
+
+    #section2 .contents2 .box3 .imgWrap img {
+        height: 150px;
+    }
+
+
+    #section3 .contents3 h1 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 35px;
+    }
+
+    #section3 .contents3 li button {
+        width: 90%;
+        margin-left: 5%;
+        height: 60px;
+        font-size: 16px;
+        margin: 5px 0 5px 5%;
+    }
+
+    #section3 .contents3 li div.active {
+        margin: 5px 0;
+        width: 90%;
+        margin-left: 5%;
+        font-size: 14px;
+    }
+
+    #section3 .contents3 h2 {
+        margin: 20px;
+        font-size: 16px;
+    }
+
+    #section3 .subText2 {
+        display: block;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    #section3 .subText2 .email {
+        width: 90%;
+        height: 45px;
+        font-size: 16px;
+        padding-left: 5px;
+    }
+
+    #section3 .subText2 .email-btn {
+        width: 25%;
+        margin-top: 5px;
+        font-size: 16px;
+        padding: 7px;
+        white-space: nowrap;
+        line-height: 25px;
+    }
+
+    #footer .footer-container {
+        text-align: center;
+    }
+
+    #footer .footer-container ul {
+        padding-bottom: 30px;
+    }
+
+    #footer .footer-container ul li {
+        width: 22%;
+        padding-bottom: 10px;
+    }
+
+    #footer .footer-container ul li:nth-child(4n){
+        padding-top: 10px;
+    }
+
+    #footer .footer-container .copyright {
+        font-size: 18px;
+        padding-bottom: 40px;
+    }
+}
