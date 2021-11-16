@@ -1,108 +1,1679 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <!-- style -->
-    <link rel="stylesheet" href="https://arrchon.github.io/privatepage/css/reset.css">
-    <link rel="stylesheet" href="https://arrchon.github.io/privatepage/css/land2.css">
+    <link rel="stylesheet" href="https://github.com/arrchon/privatepage/css/reset.css">
     <!-- icon -->
-    <link rel="icon" href="https://arrchon.github.io/privatepage/ico/newIcon.png">
+    <link rel="icon" href="https://github.com/arrchon/privatepage/ico/newIcon.png">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <title>2nd</title>
+    <title>보스</title>
+    <style>
+        @font-face {
+            font-family: 'twaysky';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #header {
+            position: fixed;
+            width: 100%;
+            overflow: hidden;
+            background: #12CBBF;
+            z-index: 10000;
+        }
+
+        #header.active {
+            background: #f7f7f7;
+            border-bottom: 1px solid #12CBBF;
+        }
+
+        #header .header .logo img {
+            width: 50px;
+            height: 50px;
+            margin: 15px 0 15px 450px;
+            float: left;
+        }
+
+        #header .header .sns {
+            display: flex;
+            align-items: baseline;
+            width: 12%;
+            padding-bottom: 0;
+            margin: 5px 400px 0 0;
+            float: right;
+        }
+
+        #header .header .sns li {
+            margin-top: 16px;
+            flex: 1 1 1%;
+        }
+
+        #header .header .sns li a img {
+            width: 36px;
+            height: 36px;
+        }
+
+        /* 콘 */
+        .container {
+            overflow: hidden;
+            width: 100%;
+            min-width: 320px;
+            max-width: 1300px;
+            margin: 0 auto;
+            height: 100%;
+        }
+        
+        /* nav */
+        #sidebar {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10000;
+            background: #12CBBF;
+        }
+        #sidebar li {
+            text-align: center;
+            padding: 10px 20px;
+            line-height: 50px;
+            color: #fff;
+        }
+        #sidebar li.active {
+            background: #fff;
+            padding: 10px 20px;
+            line-height: 50px;
+            color: #12CBBF;
+        }
+        
+        #sidebar li a {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .top {
+            position: fixed;
+            right: 1%; bottom: 2%;
+            width: 50px; height: 50px;
+            background: #333;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            z-index: 10000;
+        }
+
+        .top a {
+            font-family: 'twaysky';
+            color: #fff;
+            font-weight: lighter;
+        }
+
+        /* 1 */
+        #section1 {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            background: #f7f7f7;
+            border-bottom: 20px solid #ccc;
+        }
+
+        #section1 .intro {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #section1 .intro > .intro_text {
+            margin-left: 100px;
+        }
+
+        #section1 .intro h1 {
+            font-size: 100px;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+        }
+
+        #section1 .intro h2 {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        #section1 .intro p {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        #section1 .intro .applink {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            text-align: left;        
+        }
+
+        #section1 .container .intro_img img {
+            width: 250px; height: 240px;
+            margin: 0 0 0 10px;
+        }
+
+        #section1 .container img:first-child {
+            margin-bottom: 200px;
+        }
+        #section1 .container img:last-child {
+            margin-top: 200px;
+        }
+
+        #section1 .intro .applink a img {
+            width: 178px; height: 56px;
+            margin: 0 10px;
+            border-radius: 12px;
+        }
+
+        #section1 .notion {
+            position: absolute;
+            left: 50%; bottom: 1%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-family: 'twaysky';
+            text-align: center;
+        }
+
+        #section1 .notion strong {
+            font-size: 36px;
+        }
+
+        /* 2 */
+        #section2 {
+            overflow: hidden;
+            height: 100vh;
+            background: #f7f7f7;
+            border-bottom: 20px solid #ccc;
+            position: relative;
+        }
+
+        #section2 .container .first_cont {
+            display: flex;
+            position: relative;
+        }
+
+        #section2 .container .first_cont img {
+            width: 600px; height: 480px;
+            margin-top: 200px;
+        }
+
+        #section2 .container .first_cont img::after {
+            content: '';
+            position: absolute;
+            right: 0; bottom: 0;
+            width: 20px;
+            height: 100px;
+            background: #f7f7f7;
+        }
+
+        #section2 .container .first_cont .first_str {
+            position: relative;
+            margin-left: 20px;
+            margin-top: 200px;
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        #section2 .container .first_cont .first_str.active {
+            transform: translateX(0px);
+            transition: all 1s;
+            opacity: 1;
+        }
+
+        #section2 .container .first_cont .first_str h2 {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        #section2 .container .first_cont .first_str p {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 20px;
+        }
+
+        #section2 .container .first_cont .first_str > div {
+            width: 350px;
+            height: 55px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        #section2 .container .first_cont .first_str .kakao {
+            background: #ffeb00;
+            margin-top: 30px;
+        }
+        #section2 .container .first_cont .first_str .naver {
+            background: #03c72f;
+            margin-top: 15px;
+        }
+        #section2 .container .first_cont .first_str .google {
+            background: #fff;
+            margin-top: 15px;
+        }
+
+        #section2 .container .first_cont .first_str > div > a > span {
+            font-family: 'twaysky';
+            padding-top: 10px;
+            line-height: 55px;
+        }
+
+        #section2 .container .first_cont .first_str .cover {
+            position: absolute;
+            left: -40px;
+            bottom: 0;
+            width: 25px;
+            height: 200px;
+            border-radius: 0;
+            z-index: 10;
+            background: #f7f7f7;
+        }
+
+        #section2 .notion {
+            position: absolute;
+            left: 50%; bottom: 0%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-family: 'twaysky';
+            text-align: center;
+        }
+
+        #section2 .notion strong {
+            font-size: 36px;
+        }
+
+        /* 3 */
+        #section3 {
+            overflow: hidden;
+            height: 100vh;
+            background: #ffffff;
+            border-bottom: 20px solid #ccc;
+            position: relative;
+        }
+
+        #section3 .container .second_cont {
+            position: relative;
+            text-align: center;
+        }
+
+        #section3 .container .second_cont .second_str {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+        #section3 .container .second_cont .second_str.active {
+            transform: translateY(0px);
+            opacity: 1;
+            transition: all 1s;
+        }
+
+        #section3 .container .second_cont h2 {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            margin: 100px 0 30px 0;
+        }
+
+        #section3 .container .second_cont p {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 20px;
+        }
+
+        #section3 .container .second_cont .imgWrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #section3 .container .second_cont .imgWrap img:first-child {
+            width: 600px; height: 480px;
+        }
+
+        #section3 .container .second_cont .mockWrap {
+            position: absolute;
+            left: 45%; bottom: 0%;
+            width: 20px; height: 100px;
+            background: #fff;
+        }
+
+        #section3 .notion {
+            position: absolute;
+            left: 50%; bottom: 0%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-family: 'twaysky';
+            text-align: center;
+        }
+
+        #section3 .notion strong {
+            font-size: 36px;
+        }
+
+        /* 4 */
+        #section4 {
+            overflow: hidden;
+            height: 100vh;
+            background: #ffffff;
+            border-bottom: 20px solid #ccc;
+            position: relative;
+        }
+
+        #section4 .container .howtoplay {
+            text-align: center;
+        }
+
+        #section4 .container .howtoplay h2 {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            margin: 50px 0 20px 0;
+        }
+
+        #section4 .container .howtoplay p {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+
+        #section4 .container .howtoplay .step {
+            text-align: left;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #section4 .container .howtoplay .step img {
+            width: 100px; height: 100px;
+        }
+        #section4 .container .howtoplay .step .desc {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 20px;
+            margin-left: 15px;
+        }
+
+        #section4 .container .howtoplay .step .desc strong {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #section4 .notion {
+            position: absolute;
+            left: 50%; bottom: 0%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-family: 'twaysky';
+            text-align: center;
+        }
+
+        #section4 .notion strong {
+            font-size: 36px;
+        }
+
+        /* 5 */
+        #section5 {
+            overflow: hidden;
+            height: 55vh;
+            background: #fff;
+            position: relative;
+        }
+
+        #section5 h2 {
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            margin: 100px 0 30px 0;
+        }
+
+        #section5 .applink {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #section5 .container img:first-child {
+            margin-bottom: 10px;
+        }
+        #section5 .container img:last-child {
+            margin-top: 10px;
+        }
+
+        #section5 .applink a img {
+            border: 1px solid #000;
+            width: 267px; height: 84px;
+            margin: 0 10px;
+            border-radius: 24px;
+        }
+
+        /* 6 */
+        #section6 {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: rgb(19, 19, 19);
+        }
+
+        #section6 .contents3 {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        #section6 .contents3 h1 {
+            padding-top: 50px;
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            color: #fff;
+            padding-bottom: 50px;
+        }
+
+        #section6 .contents3 ul {
+            margin: 0 auto;
+            max-width: 900px;
+        }
+
+        #section6 .contents3 li {
+            list-style: none;
+            
+        }
+
+        #section6 .contents3 li button {
+            width: 100%;
+            height: 75px;
+            text-align: left;
+            padding-left: 15px;
+            background: #303030;
+            border: none;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 24px;
+            color: #fff;
+            margin: 5px 0;
+        }
+
+        #section6 .contents3 li button:hover {
+            color: #555;
+            transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        #section6 .contents3 li button.act {
+            color: #ccc;
+        }
+
+        #section6 .contents3 li div {
+            display: none;
+        }
+
+        #section6 .contents3 li div.active {
+            display: block;
+            background: #303030;
+            border: none;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 19px;
+            color: #777;
+            margin: 5px 0;
+            padding: 10px;
+
+        }
+
+        #section6 .btnWrap {
+            text-align: center;
+            margin-top: 1%;
+        }
+
+
+        #section6 .btnWrap .ask {
+            font-size: 24px;
+            padding: 10px 20px;
+        }
+
+        /* footer */
+        #footer {
+            position: relative;
+            width: 100%;
+            background: #000;
+            height: 52vh;
+        }        
+
+        #footer .footer-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        #footer .footer-container .footer-contents {
+            display: flex;
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #footer .footer-container .footer-contents .call {
+            padding-top: 50px;
+            margin-bottom: 30px;
+            color: #666;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        #footer .footer-container ul {
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+        #footer .footer-container ul li {
+            list-style: none;
+            display: inline-block;
+            width: 24.5%;
+            box-sizing: border-box;
+            padding-top: 10px;
+        }
+        #footer .footer-container ul li a {
+            text-decoration: none;
+            color: #666;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        #footer .footer-container .copyright {
+            color: #666;
+            font-family: 'Noto Sans KR', sans-serif;
+            letter-spacing: 1px;
+            font-size: 24px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        #footer .footer-container .copyright span {
+            font-size: 16px;
+        }
+
+        #footer .footer-container .last-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 10%;
+        }
+
+        #footer .footer-container .last-img img {
+            width: 100px;
+            height: 100px;  
+        }
+
+        /******* resp *********/
+        /* 1280px */
+        @media screen and (max-width: 1280px){
+            /* 헤더 + 사이드 */
+            #header .header .logo img {
+                width: 45px; height: 45px;
+                margin: 10px 0 10px 200px;
+            }
+
+            #header .header .sns {
+                margin: 0px 150px 0px 0px;
+            }
+
+            #header .header .sns li {
+                margin: 15px 5px 0 0;
+            }
+
+            .container {
+                max-width: 980px;
+            }
+
+            #sidebar li {
+                padding: 5px 10px;
+                line-height: 40px;
+            }
+
+            #sidebar li.active {
+                padding: 5px 10px;
+                line-height: 40px;
+            }
+
+            #sidebar li a {
+                font-size: 18px;
+            }
+            
+            /* 1 */
+            #section1 {
+                border-bottom: 10px solid #ccc;
+            }
+
+
+
+            #section1 .intro h1 {
+                font-size: 80px;
+            }
+
+            #section1 .intro h2 {
+                font-size: 35px;
+            }
+
+            #section1 .intro p {
+                font-size: 16px;
+            }
+
+            #section1 .container .intro_img img {
+                width: 200px; height: 195px;
+            }
+
+            #section1 .notion {
+                font-size: 17px;
+            }
+
+            #section1 .notion strong {
+                font-size: 32px;
+            }
+
+            /* 2 */
+            #section2 {
+                border-bottom: 10px solid #ccc;
+            }
+
+            #section2 .container .first_cont {
+                display: flex;
+                position: relative;
+            }
+
+            #section2 .container .first_cont img {
+                width: 576px; height: 440px;
+            }
+
+            #section2 .container .first_cont .first_str h2 {
+                font-size: 33px;
+            }
+
+            #section2 .container .first_cont .first_str p {
+                font-size: 17px;
+            }
+
+            #section2 .container .first_cont .first_str > div {
+                width: 330px;
+                height: 50px;
+            }
+
+            #section2 .notion {
+                font-size: 17px;
+            }
+
+            #section2 .notion strong {
+                font-size: 32px;
+            }
+
+            /* 3 */
+            #section3 {
+                border-bottom: 10px solid #ccc;
+            }
+
+            #section3 .container .second_cont h2 {
+                font-size: 35px;
+                margin: 50px 0 15px 0;
+            }
+
+            #section3 .container .second_cont p {
+                font-size: 17px;
+            }
+
+            #section3 .container .second_cont .imgWrap {
+                margin-top: 20px;
+            }
+
+            #section3 .container .second_cont .imgWrap img:first-child {
+                width: 540px; height: 420px;
+            }
+
+            #section3 .notion {
+                font-size: 17px;
+            }
+
+            #section3 .notion strong {
+                font-size: 32px;
+            }
+
+            /* 4 */
+            #section4 {
+                border-bottom: 10px solid #ccc;
+            }
+
+
+            #section4 .container .howtoplay h2 {
+                font-size: 36px;
+                margin: 40px 0 10px 0;
+            }
+
+            #section4 .container .howtoplay p {
+                font-size: 18px;
+                margin-bottom: 35px;
+            }
+
+            #section4 .container .howtoplay .step {
+                margin-left: 3%;
+            }
+
+            #section4 .container .howtoplay .step img {
+                width: 90px; height: 90px;
+            }
+
+            #section4 .container .howtoplay .step .desc strong {
+                font-size: 22px;
+            }
+
+            #section4 .container .howtoplay .step .desc {
+                font-size: 17px;
+            }
+
+            #section4 .notion {
+                font-size: 17px;
+            }
+
+            #section4 .notion strong {
+                font-size: 32px;
+            }
+
+            /* 5 */
+            #section5 h2 {
+                font-size: 35px;
+            }
+
+            #section5 .applink a img {
+                width: 270px; height: 87px;
+            }
+
+            /* fo */
+            #footer .footer-container {
+                max-width: 864px;
+                margin: auto;
+            }
+
+            #footer .footer-container .last-img img {
+                width: 80px; height: 80px;
+            }
+        }
+
+        /** 1024px **/
+        @media screen and (max-width: 1024px) {
+            #header .header .logo img {
+                width: 40px; height: 40px;
+                margin: 8px 0 8px 125px;
+            }
+
+            #header .header .sns li {
+                margin: 10px 5px 5px 0;
+            }
+
+            .container {
+                max-width: 800px;
+            }
+
+            
+            #sidebar li a {
+                font-size: 17px;
+            }
+
+            /* 1 */
+            #section1 {
+                height: 70vh;
+            }
+
+            #section1 .intro {
+                height: 100%;
+            }
+
+            #section1 .container .intro_img img {
+                width: 135px; height: 160px;
+            }
+
+            #section1 .notion {
+                bottom: 30%;
+            }
+
+            /* 2 */
+            #section2 {
+                height: 70vh;
+            }
+
+            #section2 .container .first_cont img {
+                margin-top: 250px;
+                width: 440px;
+                height: 360px;
+            }
+
+            #section2 .container .first_cont .first_str {
+                margin-top: 250px;
+            }
+
+            #section2 .container .first_cont .first_str h2 {
+                font-size: 29px;
+            }
+
+            #section2 .container .first_cont .first_str p {
+                font-size: 16px;
+            }
+
+            #section2 .container .first_cont .first_str > div {
+                width: 310px;
+                height: 48px;
+            }
+            
+            /* 3 */
+            #section3 {
+                height: 70vh;
+            }
+
+            #section3 .container .second_cont .imgWrap {
+                margin-top: 100px;
+            }
+
+            #section3 .container .second_cont .imgWrap img:first-child {
+                width: 480px;
+                height: 396px;
+                margin-left: 100px;
+            }
+
+            /* 4 */
+            #section4 {
+                height: 60vh;
+            }
+
+            #section4 .container .howtoplay p {
+                margin-bottom: 60px;
+            }
+
+            #section4 .container .howtoplay .step {
+                margin-left: 7%;
+            }
+
+            #section4 .container .howtoplay .step img {
+                width: 80px; height: 80px;
+            }
+
+            /* 5 */
+            #section5 {
+                height: 32vh;
+            }
+
+            #section5 h2 {
+                font-size: 28px;
+            }
+
+            #section5 .applink a img {
+                width: 180px; height: 58px;
+            }
+
+            /* 6 */
+            #section6 {
+                height: 70vh;
+            }
+
+            #section6 .contents3 {
+                max-width: 640px;
+            }
+
+            #section6 .btnWrap {
+                margin-top: 3%;
+            }
+
+            /* f */
+            #footer {
+                height: 40vh;
+            }
+
+            #footer .footer-container {
+                max-width: 680px;
+            }
+
+            #footer .footer-container ul li {
+                width: 22%;
+            }
+
+            #footer .footer-container .copyright {
+                white-space: nowrap;
+            }
+        }
+
+        /****** 864px *****/
+        @media screen and (max-width: 864px) {
+            /*** 위 ***/
+            html {
+                font-size: 90%;
+            }
+
+            #header .header .logo img {
+                width: 2.5rem; height: 2.5rem;
+                margin: 0.5rem 0rem 0.5rem 10rem;
+            }
+
+            #header .header .sns li {
+                margin-top: 0.75rem;
+            }
+
+            #header .header .sns li a img {
+                width: 2rem; height: 2rem;
+            }
+
+            .container {
+                max-width: 48rem;
+            }
+
+            #sidebar li {
+                padding: 0.2rem 0.5rem;
+                line-height: 2.2rem;
+            }
+
+            #sidebar li.active {
+                padding: 0.2rem 0.5rem;
+                line-height: 2.2rem;
+            }
+
+            #sidebar li a {
+                font-size: 1rem;
+            }
+
+            /* 1 */
+            #section1 {
+                height: 48rem;
+            }
+
+            #section1 .container {
+                max-width: 50rem;
+            }
+
+            #section1 .intro > .intro_text {
+                margin-left: 5rem;
+            }
+
+            #section1 .container .intro_img img {
+                width: 6rem; height: 12rem;
+            }
+            
+            #section1 .intro h1 {
+                font-size: 4.5rem;
+                padding-bottom: 1rem;
+            }
+            
+            #section1 .intro h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            #section1 .intro p {
+                font-size: 1.2rem;
+            }
+
+            #section1 .intro .applink a img {
+                width: 10rem;
+                height: 3.5rem;
+            }
+
+            #section1 .notion {
+                font-size: 1.1rem;
+                bottom: 0%;
+            }
+
+            #section1 .notion strong {
+                font-size: 2rem;
+            }
+
+            /* 2 */
+            #section2 {
+                height: 48rem;
+            }
+
+            #section2 .container .first_cont img {
+                margin-top: 10.5rem;
+                width: 24rem; height: 20rem;
+            }
+            
+            #section2 .container .first_cont .first_str {
+                margin-top: 8rem;
+            }
+
+            #section2 .container .first_cont .first_str h2 {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            #section2 .container .first_cont .first_str p {
+                font-size: 1rem;
+            }
+
+            #section2 .container .first_cont .first_str > div {
+                width: 20rem;
+                height: 4rem;
+            }
+
+            #section2 .container .first_cont .first_str > div > a > span {
+                font-size: 1.25rem;
+            }
+
+            #section2 .notion {
+                font-size: 1.1rem;
+            }
+
+            #section2 .notion strong {
+                font-size: 2rem;
+            }
+
+            /* 3 */
+            #section3 {
+                height: 48rem;
+            }
+
+            #section3 .container .second_cont h2 {
+                font-size: 2.2rem;
+                margin: 3rem 0 1.2rem 0;
+            }
+
+            #section3 .container .second_cont p {
+                font-size: 1.1rem;
+            }
+
+            #section3 .container .second_cont .imgWrap {
+                margin-top: 3rem;
+            }
+
+            #section3 .container .second_cont .imgWrap img {
+                width: 25rem; height: 16rem;
+                margin-right: 1rem;
+            }
+
+            #section3 .container .second_cont .imgWrap img:first-child {
+                width: 26rem; height: 17rem;
+                margin-left: 1rem;
+                margin-right: 0;
+            }
+
+            #section3 .notion {
+                font-size: 1.1rem;
+            }
+
+            #section3 .notion strong {
+                font-size: 2rem;
+            }
+
+            /* 4 */
+            #section4 {
+                height: 48rem;
+            }
+
+            #section4 .container {
+                height: 85%;
+            }
+
+            #section4 .container .howtoplay h2 {
+                font-size: 2.2rem;
+                margin: 2rem 0 0.625rem 0;
+            }
+
+            #section4 .container .howtoplay p {
+                font-size: 1.3rem;
+                margin-bottom: 1.5rem;
+            }
+
+            #section4 .container .howtoplay .step {
+                margin-bottom: 1rem;
+            }
+
+            #section4 .container .howtoplay .step img {
+                width: 4.5rem; height: 4.5rem;
+            }
+
+            #section4 .container .howtoplay .step .desc {
+                font-size: 1rem;
+            }
+
+            #section4 .container .howtoplay .step .desc strong {
+                font-size: 1.3rem;
+            }
+
+            #section4 .notion {
+                font-size: 1.1rem;
+            }
+
+            #section4 .notion strong {
+                font-size: 2rem;
+            }
+
+            /* 5 */
+            #section5 {
+                height: 24rem;
+            }
+
+            #section5 h2 {
+                font-size: 1.6rem;
+                margin: 4rem 0 1.6rem 0;
+            }
+
+            #section5 .applink a img {
+                width: 12rem; height: 4rem; 
+            }
+
+            /* 6 */
+            #section6 {
+                height: 48rem;
+            }
+
+            #section6 .contents3 {
+                max-width: 40rem;
+            }
+
+            #section6 .contents3 h1 {
+                padding: 2rem 0;
+                font-size: 3.5rem;
+            }
+
+            #section6 .contents3 li button {
+                height: 3.5rem;
+                padding-left: 1rem;
+                font-size: 1.3rem;
+                margin: 0.3rem 0;
+            }
+
+            #section6 .contents3 li div.active {
+                font-size: 1.1rem;
+            }
+
+            #section6 .btnWrap .ask {
+                margin-top: 0%;
+                font-size: 1.3rem;
+                padding: 0.625rem 1.25rem;
+            }
+
+            /* ff */
+            #footer {
+                height: 28rem;
+            }
+
+            #footer .footer-container .footer-contents {
+                justify-content: space-evenly;
+            }
+
+            #footer .footer-container .footer-contents .call {
+                padding-top: 3rem;
+                margin-bottom: 1.5rem;
+            }
+
+            #footer .footer-container ul {
+                margin-left: 4%;
+                padding-bottom: 2rem;
+            }
+
+            #footer .footer-container ul li {
+                width: 23%;
+                font-size: 1.2rem;
+            }
+
+            #footer .footer-container .copyright {
+                font-size: 1.5rem;
+            }
+
+            #footer .footer-container .copyright span {
+                font-size: 1rem;
+            }
+
+            #footer .footer-container .last-img {
+                height: 0%;
+            }
+            
+            #footer .footer-container .last-img img {
+                width: 3.5rem; height: 3.5rem;
+                
+            }
+        }
+
+        /****** 768 *****/
+        @media screen and (max-width: 768px) {
+            /* 위 */
+            html {
+                font-size: 84%;
+            }
+
+            #section1 .container .intro_img img  {
+                width: 5rem;
+                height: 12rem;
+            }
+
+            #section4 .container {
+                height: 80%;
+            }
+
+            #section4 .container .howtoplay .step {
+                margin-left: 9%;
+            }
+        }
+
+        /** 720 **/
+        @media screen and (max-width: 720px) {
+            /*** 위 ***/
+            html {
+                font-size: 75%;
+            }
+
+            #section1 .container .intro_img img  {
+                width: 6rem;
+                height: 12rem;
+            }
+
+            #section4 .container {
+                height: 80%;
+            }
+        }
+
+        /**** 모바일 ****/
+        @media screen and (max-width: 480px) {
+            /*** 위 ***/
+            html {
+                font-size: 50%;
+            }
+
+            #header .header .logo img {
+                margin: 0.5rem 0rem 0.5rem 10rem;
+            }
+
+            #header .header .sns {
+                margin: 0rem 12rem -1rem 0rem;
+            }
+
+            #header .header .sns li {
+                margin-top: 0.75rem;
+            }
+
+            section {
+                width: 105vw;
+            }
+
+            #section1 {
+                border-bottom: 5px solid #ccc;
+            }
+            #section2 {
+                border-bottom: 5px solid #ccc;
+            }
+            #section3 {
+                border-bottom: 5px solid #ccc;
+            }
+            #section4 {
+                border-bottom: 5px solid #ccc;
+            }
+
+            .container {
+                max-width: 44rem;
+            }
+
+            #sidebar li {
+                padding: 0.2rem 0.3rem 0.7rem 0.3rem;
+                line-height: 2.2rem;
+            }
+
+            #sidebar li.active {
+                padding: 0.2rem 0.3rem 0.7rem 0.3rem;
+                line-height: 2.2rem;
+            }
+
+            /* cont */
+            #section1 .container {
+                max-width: 50rem;
+            }
+
+            #section1 .intro > .intro_text {
+                margin-left: 2rem;
+            }
+
+            #section1 .container .intro_img {
+                margin-top: 15rem;
+            }
+
+            #section1 .intro p {
+                margin-bottom: 2rem;
+            }
+            
+            #section1 .intro .applink a img {
+                margin: 0 1rem;
+            }
+
+            #section1 .container img:last-child {
+                margin-top: 10rem;
+            }
+
+            #section1 .container .intro_img img  {
+                width: 4rem;
+                height: 12rem;
+            }
+
+            
+
+            #section2 .container .first_cont .first_str h2 {
+                font-size: 1.6rem;
+            }
+
+            #section2 .container .first_cont .first_str p {
+                width: 95%;
+                
+            }
+
+            #section2 .container .first_cont img {
+                width: 22rem;
+                height: 19rem;
+                margin-left: 0.4rem;
+            }
+
+            #section2 .container .first_cont .first_str > div {
+                width: 19rem;
+                height: 3.5rem;
+            }
+
+            #section2 .container .first_cont .first_str .kakao {
+                margin-top: 1rem;
+            }
+
+            #section2 .container .first_cont .first_str .naver {
+                margin-top: 1rem;
+            }
+
+            #section2 .container .first_cont .first_str .google {
+                margin-top: 1rem;
+            }
+
+            #section2 .container .first_cont .first_str > div > a > span {
+                line-height: 0;
+                font-size: 1rem;
+                padding-top: 0;
+            }
+
+            #section4 .container .howtoplay .step {
+                margin-top: 3%;
+                margin-left: 5%;
+            }
+
+            #section4 .container {
+                height: 82%;
+            }
+
+            #section5 {
+                height: 22rem;
+            }
+
+            #section6 .contents3 {
+                max-width: 36rem;
+            }
+
+            #section6 .contents3 li button {
+                margin: 0.15rem 0;
+                height: 3.5rem;
+            }
+
+            #section6 .contents3 li div.active {
+                margin: 0;
+                padding: 0.5rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            #footer {
+                height: 32rem;
+            }
+
+            #footer .footer-container .copyright {
+                padding-bottom: 3rem;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            #header .header .logo img {
+                margin: 0.5rem 0rem 0.5rem 9rem;
+            }
+
+            #section1 .intro {
+                justify-content: center;
+            }
+
+            #section4 .container {
+                height: 75%;
+                max-width: 42rem;
+            }
+            
+        }
+
+        @media screen and (max-width: 420px) {
+            html {
+                font-size: 45%;
+            }
+
+            #section4 .container {
+                height: 82%;
+                max-width: 42rem;
+            } 
+
+            #section6 {
+                height: 54vh;
+            }
+
+            #footer {
+                height: 34rem;
+            }
+        }
+
+        @media screen and (max-width: 390px) {
+            #sidebar {
+                top: 5.1%;
+                left: 10%;
+            }
+
+            #sidebar ul {
+                display: flex;
+            }
+
+            #section4 .container .howtoplay .step {
+                margin-top: 3%;
+                margin-left: 1%;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            #header .header .logo img {
+                margin: 0.5rem 0rem 0.5rem 6rem;
+            }
+
+            #section1 .container img:first-child {
+                margin-bottom: 10rem;
+            }
+
+            #section1 .container .intro_img {
+                margin-right: 2rem;
+                margin-top: 0;
+            }
+
+            #section4 .container .howtoplay .step {
+                margin-top: 3%;
+                margin-left: 1%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- header -->
     <header id="header">
-        <div class="logo">
-            <img src="./img/bear-logo.png" alt="logo">
-        </div>
-        <div class="signIn">
-            <a href="#" class="logIn-btn"><span>로그인</span></a>
+        <div class="header">
+            <div class="logo">
+                <img src="./img/bear-logo.png" alt="logo">
+            </div>
+            <ul class="sns">
+                <li><a href="#footer"><img src="./img/youtube.png" alt="유튭"></a></li>
+                <li><a href="#footer"><img src="./img/instagram.png" alt="인스타"></a></li>
+                <li><a href="#footer"><img src="./img/facebook.png" alt="페북"></a></li>
+                <li><a href="#footer"><img src="./img/kakaotalk.png" alt="카톡"></a></li>
+                <li><a href="#footer"><img src="./img/naverblog.png" alt="블로그"></a></li>
+            </ul>
         </div>
     </header>
-    <!-- main -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="#section1">소개</a></li>
+            <li><a href="#section2">회원가입</a></li>
+            <li><a href="#section3">사용성 및 편의성</a></li>
+            <li><a href="#section4">즐기는 법</a></li>
+            <li><a href="#section5">앱 다운로드</a></li>
+            <li><a href="#section6">자주 하는 질문</a></li>
+        </ul>
+    </nav>
+    <aside class="top">
+        <a href="#section1">TOP</a>
+    </aside>
     <main id="main">
         <section id="section1">
             <div class="container">
                 <div class="intro">
-                    <div class="mainText">
-                        <h1>현실 보드게임의 즐거움을<br>
-                            모바일까지.</h1>
-                        <p>보드게임용 인스타그램처럼 사용해보세요.<br> iOS 및 안드로이드에서 사용가능합니다.<br>무료로 마음껏 체험해보세요.</p>
-                        <strong>BE THE BOS</strong>
+                    <div class="intro_text">
+                        <h1>boss</h1>
+                        <h2>현실 보드게임의 즐거움을<br>모바일로 가져오다</h2>
+                        <p>보드게임에 최적화된, 유저들의 필수 소셜 네트워킹 서비스
+                            <br>어플 다운받고 새로운 즐거움을 누려보세요
+                        </p>
+                        <div class="applink">
+                            <a href="#"><img src="./img/google.png" alt="구글플레이"></a>
+                            <a href="#"><img src="./img/apple.png" alt="앱스토어"></a>
+                        </div>
                     </div>
-                    <div class="imgWrap">
-                        <img src="https://d3udu241ivsax2.cloudfront.net/v3/images/brand/intro-model-pc.47e4062644075dc7cf5b0c6b8438ce5b.png" alt="main-image">
+                    <div class="intro_img">
+                        <img src="./img/main-image1.png" alt="보드게임이미지1">
+                        <img src="./img/main-image2.png" alt="보드게임이미지1">
                     </div>
                 </div>
-                <a href="http://yone10.dothome.co.kr/boardGameProject/landing.html" target="_blank" class="toApplink">
-                    어플 다운로드하기
-                </a>
+                <div class="notion">
+                    스크롤을 내려주세요<br>
+                    <strong>⬇</strong>
+                </div>
             </div>
         </section>
         <section id="section2">
             <div class="container">
-                <div class="strengthEx">
-                    <span>보드게임러라면 꼭 써봐야하는<br>BOS의 장점 3가지<br></span><br>
-                    <p>새로운 세상의 일원이 되어<br> 다른 일원들과 소통을 즐겨보세요.</p>
+                <div class="first_cont">
+                    <img src="./img/design.png" alt="목업이미지">
+                    <div class="first_str">
+                        <h2>새롭게 회원가입할 필요없이<br>기존 SNS 계정으로 가입</h2>
+                        <p>누구나 가지고 있는 카카오, 네이버, 구글 계정으로 <br> 손쉽게 이용할 수 있습니다. <br>카카오톡 친구들을 앱 친구로 등록하세요.</p>
+                        <div class="kakao">
+                            <a href="#section2"><span>카카오톡으로 가입하기</span></a>
+                        </div>
+                        <div class="naver">
+                            <a href="#section2"><span>네이버 계정으로 가입하기</span></a>
+                        </div>
+                        <div class="google">
+                            <a href="#section2"><span>구글계정으로 가입하기</span></a>
+                        </div>
+                        <div class="cover"></div>
+                    </div>
                 </div>
-                <div class="contWrap">
-                    <div class="str1">
-                        <img src="./img/appMockup.png" alt="장점이미지1">
-                        <h2>SNS계정으로 가입하세요.</h2>
-                        <p>구글, 네이버, 카카오 계정으로도 회원가입이 가능합니다.<br>
-                            새로운 개인정보의 노출없이 기존의 계정으로<br>
-                            다양하게 피드를 꾸며 친구들에게 보여주세요.</p>
-                    </div>
-                    <div class="str2">
-                        <img src="./img/appMockup.png" alt="장점이미지2">
-                        <h2>SNS계정으로 가입하세요.</h2>
-                        <p>구글, 네이버, 카카오 계정으로도 회원가입이 가능합니다.<br>
-                            새로운 개인정보의 노출없이 기존의 계정으로<br>
-                            다양하게 피드를 꾸며 친구들에게 보여주세요.</p>
-                    </div>
-                    <div class="str3">
-                        <img src="./img/appMockup.png" alt="장점이미지3">
-                        <h2>SNS계정으로 가입하세요.</h2>
-                        <p>구글, 네이버, 카카오 계정으로도 회원가입이 가능합니다.<br>
-                            새로운 개인정보의 노출없이 기존의 계정으로<br>
-                            다양하게 피드를 꾸며 친구들에게 보여주세요.</p>
-                    </div>
+                <div class="notion">
+                    스크롤을 내려주세요<br>
+                    <strong>⬇</strong>
                 </div>
             </div>
         </section>
         <section id="section3">
             <div class="container">
-                <div class="chobo">
-                    <h2>보드게임에 입문한<br>초보자를 위해 준비한 컨텐츠<br>오직 BOS에서만.</h2>
-                </div>
-                <div class="forNew">
-                    <div class="gameEx">
-                        <div class="exp">
-                            다양한 게임에 대해 알고싶으신 당신을 위해<br>준비한 게임 설명 
+                <div class="second_cont">
+                    <div class="second_str">
+                        <h2>이해하기 쉽고 직관적인 UI 디자인<br>편리하고 익히기 쉬운 사용성까지</h2>
+                        <p>기존의 페이스북, 유튜브, 인스타그램에 익숙한 유저라면<br>누구나 쉽게 적응하고
+                            간단하게 사용할 수 있습니다.<br>
+                            너무 빠져들지 않게 조심하세요🔥
+                        </p>
+                        <div class="imgWrap">
+                            <img src="./img/design2.png" alt="앱디자인">
+                            <img src="./img/design3.png" alt="앱디자인">
+                            <div class="mockWrap"></div>
                         </div>
-                        <a href="#" target="_blank">게임설명 바로가기 -></a>
-                        <img src="./img/bear-logo.png" alt="게임설명로고">
-                    </div>
-                    <div class="commu">
-                        <div class="exp">
-                            새로운 보드게임에 흥미가 생기는 당신을 위해<br>마련된 구매사이트 
-                        </div>
-                        <a href="#" target="_blank">쇼핑몰 바로가기 -></a>
-                        <img src="./img/com.png" alt="구매로고">
                     </div>
                 </div>
-                <div class="encourage">
-                    <p>더 많은 게임을 익히고 순위를 높여나가세요!</p>
+                <div class="notion">
+                    스크롤을 내려주세요<br>
+                    <strong>⬇</strong>
                 </div>
             </div>
         </section>
         <section id="section4">
+            <div class="container">
+                <div class="howtoplay">
+                    <h2>그럼 어떻게 사용하면 될까?</h2>
+                    <p>어렵지 않으니 잘 보고 따라해주세요~</p>
+                    <div class="step">
+                        <img src="./img/413377-clothing-style/svg/011-dress-3.svg" alt="step1">
+                        <div class="desc">
+                            <strong>STEP 1</strong>
+                            <span>태권도는 우리나라의 고유의 운동이다. 올림픽에까지도 포함되어 있어서 우리나라가 메달을 따는 데에 공헌도가 높은 효자종목이다.</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="./img/413377-clothing-style/svg/014-dress-1.svg" alt="step2">
+                        <div class="desc">
+                            <strong>STEP 2</strong>
+                            <span>다른 나라에서는 지금 높은 기술력을 이용해서 우리나라를 위협하고 있다. 우리나라가 우위를 유지하기 위해서는 물론 기술도 필요하다.</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="./img/413377-clothing-style/svg/019-bow-tie.svg" alt="step3">
+                        <div class="desc">
+                            <strong>STEP 3</strong>
+                            <span>그렇지만 태권도에 대해서도 알고 있다면 더 효율적이다. 여기서는 태권도의 의미. 역사, 특성, 동작, 품새, 정신에 대해 알아보기로 한다.</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="./img/413377-clothing-style/svg/026-shorts.svg" alt="step4">
+                        <div class="desc">
+                            <strong>STEP 4</strong>
+                            <span>먼저 태권도에 의미에 대해 알아보자. 우선 태권도는 한국 고유의 무예이다. 또 승패가 목적이 아닌 심신 단련, 인격 수양의 운동이다. 방어운동이기도 하다.</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <img src="./img/413377-clothing-style/svg/029-jacket-2.svg" alt="step5">
+                        <div class="desc">
+                            <strong>STEP 5</strong>
+                            <span>태권도의 역사도 짚고 넘어가보자. 지금으로부터 1300여 년 전 삼국 중 신라에서는 ‘화랑 무술’이 고구려에서는 ‘택견’이라는 무술이 있었다.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="notion">
+                    스크롤을 내려주세요<br>
+                    <strong>⬇</strong>
+                </div>
+            </div>
+        </section>
+        <section id="section5">
+            <div class="container">
+                <h2>
+                    자신만의 공간을 꾸며나가고 친구들과 함께 관리해보세요.<br>
+                    이제껏 경험 못 했던 쉽고 신선한 보드게임용 SNS,<br>
+                    앱 다운로드 받고 새로운 세상을 경험해보세요.
+                </h2>
+                <div class="applink">
+                    <a href="#"><img src="./img/google.png" alt="구글플레이"></a>
+                    <a href="#"><img src="./img/apple.png" alt="앱스토어"></a>
+                </div>
+            </div>
+        </section>
+        <section id="section6">
             <div class="contents3">
                 <h1>자주 묻는 질문</h1>
                 <ul class="QAWrap">
@@ -131,24 +1702,21 @@
                     </li>
                     <li>
                         <button type="button">
-                            넷플릭스란 무엇인가요?
+                            멤버십을 해지하려면 어떻게 하나요?
                         </button>
                         <div>
                             <span>
-                                넷플릭스는 각종 수상 경력에 빛나는 TV 프로그램, 영화, 애니메이션, 다큐멘터리 등 다양한 콘텐츠를 인터넷 연결이 가능한 수천 종의 디바이스에서 시청할 수 있는 스트리밍 서비스입니다.
-                                <br><br>
-                                저렴한 월 요금으로 일체의 광고 없이 원하는 시간에 원하는 만큼 즐길 수 있습니다. 무궁무진한 콘텐츠가 준비되어 있으며 매주 새로운 TV 프로그램과 영화가 제공됩니다.
+                                넷플릭스는 부담 없이 간편합니다. 성가신 계약도, 약정도 없으니까요.멤버십 해지도 온라인에서 클릭 두 번이면 완료할 수 있습니다. 해지 수수료도 없으니 원할 때 언제든 계정을 시작하거나 종료하세요.
                             </span>
                         </div>
                     </li>
                     <li>
                         <button type="button">
-                            넷플릭스 요금은 얼마인가요?
+                            넷플릭스에서 어떤 콘텐츠를 시청할 수 있나요?
                         </button>
                         <div>
                             <span>
-                                스마트폰, 태블릿, 스마트 TV, 노트북, 스트리밍 디바이스 등 다양한 디바이스에서 월정액 요금 하나로 넷플릭스를 시청하세요. 
-                                멤버십 요금은 월 9,500원부터 14,500원까지 다양합니다. 추가 비용이나 약정이 없습니다.
+                                넷플릭스는 장편 영화, 다큐멘터리, TV 프로그램, 애니메이션, 각종 상을 수상한 넷플릭스 오리지널 등 수많은 콘텐츠를 확보하고 있습니다. 마음에 드는 콘텐츠를 원하는 시간에 원하는 만큼 시청하세요.
                             </span>
                         </div>
                     </li>
@@ -179,23 +1747,18 @@
                         </div>
                     </li>
                 </ul>
+                <div class="btnWrap">
+                    <button type="button" class="ask">질문 등록하기</button>
+                </div>
             </div>
         </section>
     </main>
-    <!-- footer -->
     <footer id="footer">
         <div class="footer-container">
             <div class="footer-contents">
                 <p class="call">
                     궁금한 점 있으신가요? Tel) 02-724-xxxx
                 </p>
-                <ul class="sns">
-                    <li><a href="#footer"><img src="https://d3udu241ivsax2.cloudfront.net/v3/images/common/sns-youtube.b399a84a750e221ded9fef98ddeca396.png" alt="유튭"></a></li>
-                    <li><a href="#footer"><img src="https://d3udu241ivsax2.cloudfront.net/v3/images/common/sns-instagram.ba9357bd6c1bb50854389e9f15f76d76.png" alt="인스타"></a></li>
-                    <li><a href="#footer"><img src="https://d3udu241ivsax2.cloudfront.net/v3/images/common/sns-facebook.3a7b1d9f3faea84dcb6091c956639408.png" alt="페북"></a></li>
-                    <li><a href="#footer"><img src="https://d3udu241ivsax2.cloudfront.net/v3/images/common/sns-kakaotalk.fa50e1326498ebcac6ba4a1e68f66882.png" alt="카톡"></a></li>
-                    <li><a href="#footer"><img src="https://d3udu241ivsax2.cloudfront.net/v3/images/common/sns-naver.506d566acd9761a32dca9bb7efb1eee5.png" alt="블로그"></a></li>
-                </ul>
             </div>
             <ul>
                 <li><a href="#">라이엇게임즈</a></li>
@@ -212,18 +1775,112 @@
                 <li><a href="#">넷플릭스</a></li>
                 <li><a href="#">밀리의 서재</a></li>
                 <li><a href="#">비바리퍼블리카</a></li>
-                <li><a href="#">롯데시네마</a></li>
+                <li><a href="#">마이크로소프트</a></li>
                 <li><a href="#">미주한국일보</a></li>
             </ul>
             <div class="copyright">
-                COPYRIGHT (c) 2021. <strong>KOREATIMESUS</strong> All right reversed.
+                COPYRIGHT (c) 2021. <strong>KOREATIMESUS</strong> All right reversed.<br>
+                <span>
+                    아이콘 제작자
+                    <a href="https://www.freepik.com" title="Freepik">Freepik</a> from 
+                    <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a>
+                </span>
+            </div>
+            <div class="last-img">
+                <img src="./img/game-image-removebg.png" alt="게임이미지">
             </div>
         </div>
     </footer>
-<!-- gsap -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
-<!-- script -->
-<script src="./js/landingRemake.js"></script>
+<script>
+    
+let header = document.getElementById("header");
+
+window.addEventListener('scroll', function(){
+    let scroll = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+    //헤더 색깔 바꾸기    
+    if ( scroll > 0 ){
+        header.classList.add("active");
+    } else {
+        header.classList.remove("active");
+    }
+
+    //컨텐츠 움직이기1
+    let str = document.querySelector('.first_str');
+
+    if ( scroll > document.getElementById("section1").offsetTop && scroll < document.getElementById("section3").offsetTop){
+        str.classList.add("active");
+    } else {
+        str.classList.remove("active");
+    }
+
+    //2
+    let str1 = document.querySelector('.second_str');
+
+    if ( scroll > document.getElementById("section2").offsetTop && scroll < document.getElementById("section4").offsetTop){
+        str1.classList.add("active");
+    } else {
+        str1.classList.remove("active");
+    }
+})
+
+//클릭했을때 부드럽게 넘어가는 효과
+document.querySelectorAll(".sns li a").forEach(elem => {
+    elem.addEventListener("click", e => {
+        e.preventDefault();
+        document.querySelector(elem.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        })
+    });
+})
+
+//사이드바 액티브
+
+
+window.addEventListener('scroll', function(){
+    let dot = document.querySelectorAll("#sidebar li");
+    let scroll1 = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+    
+    for(i=1; i<=6; i++){
+        if ( scroll1 >= document.getElementById('section'+i).offsetTop - 100){
+            dot.forEach(el => {
+                el.classList.remove('active');
+            })
+
+            document.querySelector("#sidebar li:nth-child("+i+")").classList.add('active');
+            
+        }
+    }
+})
+
+//탭버튼 on&off
+let button = document.querySelectorAll(".QAWrap > li > button");
+let text = document.querySelectorAll(".QAWrap > li > div");
+
+button.forEach((e, i) => {
+    e.addEventListener('click', function(){
+        
+        button.forEach(el => el.classList.remove('act'));
+
+        e.classList.add("act");
+
+        text.forEach(el => {
+            el.classList.remove('active');
+        })
+
+        text[i].classList.add("active");
+
+        if ( e.classList.contains("act")){
+            e.addEventListener('click', function(){
+                text[i].classList.toggle("active");
+
+                e.classList.toggle("act");
+
+            })
+        } 
+    })
+})
+</script>
 </body>
 </html>
